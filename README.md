@@ -2,7 +2,7 @@
 ---
 ### Выполнила Михайлова Ирина Александровна, группа 2.
 
-Выполняла задание локально в [google colab](https://colab.research.google.com/drive/1vd1NVKl15iC2qofzTW1gTg6TR203Ud1p?usp=sharing).
+Выполняла задание локально в *[google colab](https://colab.research.google.com/drive/1vd1NVKl15iC2qofzTW1gTg6TR203Ud1p?usp=sharing)*.
 ---
 Мы анализируем данные scRNA-seq из статьи *"Single-cell mapping of the thymic stroma identifies IL-25-producing tuft epithelial cells"*. 
 
@@ -18,15 +18,36 @@
 
 #### ***Heatmap*** для экспрессии маркерных генов.
 
-![2](https://github.com/user-attachments/assets/dd6fb50c-50fb-4c08-871f-b3f52e0c64f2)
+![download](https://github.com/user-attachments/assets/1a48bc87-d788-4d54-841b-90e7f3afe1af)
 
 #### Полученные визуализации ***UMAP*** и ***PCA***.
 
 ![3](https://github.com/user-attachments/assets/468ea5ae-baaf-4349-898e-e7db997a0277)
 
-
 ![4](https://github.com/user-attachments/assets/6c461032-36da-459d-8489-dacf5e9ee961)
+
+#### Выводы:
+* На получившихся графиках видны группы клеток с разной экспрессией генов что говорит об их функциональных различиях.
+* ***PCA*** хуже выделяет кластеры, чем ***UMAP***. ***PCA*** лучше всего отделяет кластер *mTEC-I*, *UMAP - MTEC-IV*.
+---
+### Бонус.
+
+Сравним уровни экспресси подгруппы клеток *mTEC-IV* из прошлой части с *bulk RNA-seq* для целого тимуса мыши из статьи *[Meredith et al, 2015](https://pubmed.ncbi.nlm.nih.gov/26237550/)*.
+
+Часть *DESeq2* в *R* выполнила в отдельном *[google colab](https://colab.research.google.com/drive/1-vQO9-eyP_wl_fvaesMm3ScetpsSnpqH?usp=sharing)*
+
+#### Маркерные гены из основной части задания.
 
 ![5](https://github.com/user-attachments/assets/a11b2afb-39f3-4912-91dc-c04b16325e32)
 
+#### 100 наиболее высоко-экспрессированных генов как в ***bulk***, так и ***scRNA***.
+
 ![6](https://github.com/user-attachments/assets/981dfefc-22c8-4377-859d-2ab7651e3e4c)
+
+#### Вывод:
+* Много генов близки по экспресии, но значительная часть всё же отличается. Это значит, что экспрессия клеток образцов *bulk* и *single cell RNA-seq* различаются.
+
+#### Результаты DESeq2.
+
+![download](https://github.com/user-attachments/assets/1d09110b-1375-4ee6-99a8-827927961bf9)
+
